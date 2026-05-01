@@ -146,6 +146,7 @@
 
   &__canvas {
     flex: 1;
+    width: 100%;
     max-width: 1200px;
     position: relative;
     aspect-ratio: 1 / 1;
@@ -153,6 +154,11 @@
     align-items: center;
     justify-content: center;
 
+    @include laptop {
+      max-width: 100%;
+      width: 100%;
+      height: auto;
+    }
 
     @include tablet {
       width: 100%;

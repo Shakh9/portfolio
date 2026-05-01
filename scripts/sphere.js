@@ -22,6 +22,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // Рендерер с прозрачным фоном
   const renderer = new THREE.WebGLRenderer({ canvas, alpha: true });
   renderer.setSize(container.clientWidth, container.clientHeight);
+  renderer.setPixelRatio(window.devicePixelRatio);
   renderer.setClearColor(0x000000, 0);
 
   // Управление
