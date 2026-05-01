@@ -1,0 +1,251 @@
+@use '../helpers' as *;
+
+// СТИЛИ ДЛЯ ВСЕХ СТРАНИЦ
+.main {
+  position: relative;
+  min-height: calc(100vh - 80px);
+
+  @include tablet {
+    margin-top: 100px;
+  }
+
+
+}
+
+.page {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  padding-left: 50px;
+  padding-right: 50px;
+  width: 100%;
+  display: none;
+  pointer-events: none;
+
+  &--active {
+    display: block;
+    opacity: 1;
+    pointer-events: auto;
+    animation: pageFadeIn 0.4s ease forwards;
+  }
+  @include mobile {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}
+
+
+@keyframes pageFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+// СТИЛИ ДЛЯ HOME
+.home {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: calc(100vh - 80px);
+  gap: rem(40);
+  width: 100%;
+
+  @include laptop {
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    gap: rem(48);
+  }
+
+  @include tablet {
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    gap: rem(48);
+  }
+
+  // ЛЕВАЯ КОЛОНКА - ТЕКСТОВЫЙ КОНТЕНТ
+  &__content {
+    flex: 1;
+    max-width: 700px;
+
+    @include tablet {
+      max-width: 100%;
+    }
+  }
+
+  // Заголовок
+  &__title {
+    margin-bottom: rem(24);
+
+    @include laptop {
+      margin-top: 40px;
+    }
+  }
+
+  &__greeting {
+    display: block;
+    @include fluid-text(32, 18);
+    color: var(--color-black);
+    font-weight: 400;
+    margin-bottom: rem(8);
+  }
+
+  &__name {
+    display: block;
+    @include fluid-text(56, 32);
+    font-weight: 700;
+    color: var(--color-black);
+    line-height: 1.1;
+  }
+
+  &__typed {
+    @include fluid-text(32, 24);
+    font-weight: 500;
+    margin-bottom: rem(24);
+    color: var(--color-black);
+  }
+
+  &__typed-prefix {
+    color: var(--color-black);
+  }
+
+  &__typed-text {
+    color: var(--color-black);
+    padding-right: rem(4);
+  }
+
+  &__description {
+    @include fluid-text(22, 14);
+    color: var(--color-black);
+    line-height: 1.5;
+    margin-bottom: rem(32);
+    max-width: 500px;
+
+    @include tablet {
+      max-width: 100%;
+    }
+  }
+
+  &__buttons {
+    display: flex;
+    gap: rem(16);
+
+    @include mobile {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
+  &__canvas {
+    flex: 1;
+    max-width: 1200px;
+    position: relative;
+    aspect-ratio: 1 / 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+
+    @include tablet {
+      width: 100%;
+      height: 700px;
+    }
+
+    @include mobile {
+      height: 350px;
+    }
+
+    canvas {
+      width: 100%;
+      height: 100%;
+      display: block;
+      outline: none;
+    }
+  }
+}
+
+// Стили для кнопок
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: rem(14) rem(32);
+  min-width: rem(160);
+  height: rem(52);
+  background: var(--color-black);
+  color: var(--color-white);
+  border: 1px solid var(--color-black);
+  border-radius: rem(32);
+  font-weight: 600;
+  @include fluid-text(18, 14);
+  text-decoration: none;
+  cursor: pointer;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  transition: color 0.3s ease;
+
+
+  &::after {
+    content: "";
+    background: var(--color-white);
+    position: absolute;
+    z-index: -1;
+    left: -20%;
+    right: -20%;
+    top: 0;
+    bottom: 0;
+    transform: skewX(-45deg) scale(0, 1);
+    transition: transform 0.4s ease;
+  }
+
+  @include hover {
+    &:hover {
+      color: var(--color-black);
+
+      &::after {
+        transform: skewX(-45deg) scale(1, 1);
+      }
+    }
+  }
+
+
+  &--primary {
+    background: var(--color-black);
+    color: var(--color-white);
+
+    &::after {
+      background: var(--color-white);
+    }
+  }
+
+
+  &--secondary {
+    background: transparent;
+    color: var(--color-black);
+    border: 1px solid var(--color-black);
+
+    &::after {
+      background: var(--color-black);
+    }
+
+    @include hover {
+      &:hover {
+        color: var(--color-white);
+      }
+    }
+  }
+
+
+  &:active {
+    transform: scale(0.98);
+  }
+}

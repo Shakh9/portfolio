@@ -1,0 +1,14 @@
+@use "helpers" as *;
+
+:root {
+  //Light theme
+  --color-white: #eeeeee;
+  --color-black: #000000;
+  --color-gray: #C0C0C0;
+
+  //Dark theme
+  --color-dark-blue: #000325;
+
+
+  --font-family-base: 'Roboto', sans-serif;
+}

@@ -1,0 +1,940 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta
+    name="viewport"
+    content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+  >
+  <meta name="description" content="Web Developer crafting modern, scalable, and user-focused digital experiences with clean design, interactive interfaces, and high-performance solutions.">
+  <title>Ravin Shakhmuradov — Frontend Developer</title>
+  <link rel="stylesheet" href="styles/main.css">
+
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+
+  <meta property="og:title" content="Ravin Shakhmuradov — Frontend Developer">
+  <meta property="og:description" content="Web Developer crafting modern, scalable, and user-focused digital experiences with clean design, interactive interfaces, and high-performance solutions.">
+  <meta property="og:image" content="https://ravinshakhmuradov.ru/assets/images/og-image.png">
+  <meta property="og:url" content="https://ravinshakhmuradov.ru">
+  <meta property="og:type" content="website">
+</head>
+<body>
+  <!-- Прелоадер -->
+  <div class="entry-loader">
+    <div class="entry-loader__rect"></div>
+
+    <div class="entry-loader__names">
+      <span class="entry-loader__first">RAVIN</span>
+      <span class="entry-loader__last">SHAKHMURADOV</span>
+    </div>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar__header">
+      <div class="sidebar__avatar">
+        <img
+          src="assets/images/avatar.jpg"
+          alt="Ravin Shakhmuradov photo"
+          class="sidebar__avatar-img"
+        >
+      </div>
+      <h1 class="sidebar__logo">Ravin Shakhmuradov</h1>
+    </div>
+    <nav class="sidebar__nav">
+      <ul class="sidebar__menu">
+        <li class="sidebar__menu-item">
+          <a href="#home" class="sidebar__link active" data-link>
+            <svg class="sidebar__icon" width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M10.3125 3.75V5.625M5.625 10.3125H3.75M26.25 10.3125H24.375M5.625 15H3.75M26.25 15H24.375M5.625 19.6875H3.75M26.25 19.6875H24.375M10.3125 24.375V26.25M15 3.75V5.625M15 24.375V26.25M19.6875 3.75V5.625M19.6875 24.375V26.25M8.4375 24.375H21.5625C22.3084 24.375 23.0238 24.0787 23.5512 23.5512C24.0787 23.0238 24.375 22.3084 24.375 21.5625V8.4375C24.375 7.69158 24.0787 6.97621 23.5512 6.44876C23.0238 5.92132 22.3084 5.625 21.5625 5.625H8.4375C7.69158 5.625 6.97621 5.92132 6.44876 6.44876C5.92132 6.97621 5.625 7.69158 5.625 8.4375V21.5625C5.625 22.3084 5.92132 23.0238 6.44876 23.5512C6.97621 24.0787 7.69158 24.375 8.4375 24.375ZM9.375 9.375H20.625V20.625H9.375V9.375Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            <span>Home</span>
+            <div class="link-glow"></div>
+          </a>
+        </li>
+        <li class="sidebar__menu-item">
+          <a href="#projects" class="sidebar__link" data-link>
+            <svg class="sidebar__icon" width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M25.3125 7.96875C25.3125 10.8163 20.695 13.125 15 13.125C9.305 13.125 4.6875 10.8163 4.6875 7.96875M25.3125 7.96875C25.3125 5.12125 20.695 2.8125 15 2.8125C9.305 2.8125 4.6875 5.12125 4.6875 7.96875M25.3125 7.96875V22.0312C25.3125 24.8788 20.695 27.1875 15 27.1875C9.305 27.1875 4.6875 24.8788 4.6875 22.0312V7.96875M25.3125 7.96875V12.6562M4.6875 7.96875V12.6562M25.3125 12.6562V17.3438C25.3125 20.1913 20.695 22.5 15 22.5C9.305 22.5 4.6875 20.1913 4.6875 17.3438V12.6562M25.3125 12.6562C25.3125 15.5038 20.695 17.8125 15 17.8125C9.305 17.8125 4.6875 15.5038 4.6875 12.6562" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            <span>Projects</span>
+            <div class="link-glow"></div>
+          </a>
+        </li>
+        <li class="sidebar__menu-item">
+          <a href="#about" class="sidebar__link" data-link>
+            <svg class="sidebar__icon" width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M11.25 21.5625V22.8212C11.2501 23.3139 11.1531 23.8017 10.9645 24.2568C10.776 24.7119 10.4996 25.1255 10.1513 25.4737L9.375 26.25H20.625L19.8487 25.4737C19.5004 25.1255 19.224 24.7119 19.0355 24.2568C18.8469 23.8017 18.7499 23.3139 18.75 22.8212V21.5625M26.25 6.5625V18.75C26.25 19.4959 25.9537 20.2113 25.4262 20.7387C24.8988 21.2662 24.1834 21.5625 23.4375 21.5625H6.5625C5.81658 21.5625 5.10121 21.2662 4.57376 20.7387C4.04632 20.2113 3.75 19.4959 3.75 18.75V6.5625M26.25 6.5625C26.25 5.81658 25.9537 5.10121 25.4262 4.57376C24.8988 4.04632 24.1834 3.75 23.4375 3.75H6.5625C5.81658 3.75 5.10121 4.04632 4.57376 4.57376C4.04632 5.10121 3.75 5.81658 3.75 6.5625M26.25 6.5625V15C26.25 15.7459 25.9537 16.4613 25.4262 16.9887C24.8988 17.5162 24.1834 17.8125 23.4375 17.8125H6.5625C5.81658 17.8125 5.10121 17.5162 4.57376 16.9887C4.04632 16.4613 3.75 15.7459 3.75 15V6.5625" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            <span>About</span>
+            <div class="link-glow"></div>
+          </a>
+        </li>
+        <li class="sidebar__menu-item">
+          <a href="#contact" class="sidebar__link" data-link>
+            <svg class="sidebar__icon" width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M27.1875 8.4375V21.5625C27.1875 22.3084 26.8912 23.0238 26.3637 23.5512C25.8363 24.0787 25.1209 24.375 24.375 24.375H5.625C4.87908 24.375 4.16371 24.0787 3.63626 23.5512C3.10882 23.0238 2.8125 22.3084 2.8125 21.5625V8.4375M27.1875 8.4375C27.1875 7.69158 26.8912 6.97621 26.3637 6.44876C25.8363 5.92132 25.1209 5.625 24.375 5.625H5.625C4.87908 5.625 4.16371 5.92132 3.63626 6.44876C3.10882 6.97621 2.8125 7.69158 2.8125 8.4375M27.1875 8.4375V8.74125C27.1876 9.22143 27.0647 9.69363 26.8305 10.1129C26.5964 10.5321 26.2588 10.8844 25.85 11.1363L16.475 16.905C16.0315 17.1782 15.5209 17.3228 15 17.3228C14.4791 17.3228 13.9685 17.1782 13.525 16.905L4.15 11.1375C3.74115 10.8857 3.40359 10.5334 3.16946 10.1141C2.93534 9.69488 2.81245 9.22268 2.8125 8.7425V8.4375" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            <span>Contact</span>
+            <div class="link-glow"></div>
+          </a>
+        </li>
+        <li class="sidebar__menu-item">
+          <a href="assets/resume.pdf" class="sidebar__link" download>
+            <svg class="sidebar__icon" width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M3.75 20.625V23.4375C3.75 24.1834 4.04632 24.8988 4.57376 25.4262C5.10121 25.9537 5.81658 26.25 6.5625 26.25H23.4375C24.1834 26.25 24.8988 25.9537 25.4262 25.4262C25.9537 24.8988 26.25 24.1834 26.25 23.4375V20.625M20.625 15L15 20.625M15 20.625L9.375 15M15 20.625V3.75" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            <span>Resume</span>
+            <div class="link-glow"></div>
+          </a>
+        </li>
+      </ul>
+    </nav>
+
+    <div class="sidebar__footer">
+      <div class="copyright">
+        © Ravin Shakhmuradov, 2026
+      </div>
+    </div>
+  </aside>
+  <main class="main">
+    <section id="home" class="page page--active home">
+      <div class="home__content">
+        <h1 class="home__title">
+          <span class="home__greeting">Hello! My name is</span>
+          <span class="home__name">Ravin Shakhmuradov</span>
+        </h1>
+        <div class="home__typed">
+          <span class="home__typed-prefix">I create</span>
+          <span class="home__typed-text" id="typed-text"></span>
+        </div>
+        <p class="home__description">Development is my craft. User satisfaction is my goal.</p>
+        <div class="home__buttons">
+          <a href="#projects" class="btn btn--primary" data-link>View projects</a>
+          <a href="#contact" class="btn btn--secondary" data-link>Contact me</a>
+        </div>
+      </div>
+      <div class="home__canvas">
+        <canvas id="sphereCanvas"></canvas>
+      </div>
+    </section>
+
+    <section id="projects" class="page">
+      <div class="projects-container">
+        <h2 class="projects-title">All Projects</h2>
+        <div class="projects-grid">
+        <!-- Карточка проекта 1 -->
+          <div class="project-card">
+            <a href="https://t.me/KebabClub_bot" class="project-card__image-link" target="_blank">
+              <img src="assets/images/telegrambot.png" alt="Project 1 screenshot" class="project-card__image">
+            </a>
+            <div class="project-card__content">
+              <div class="project-card__title-wrapper">
+                <a href="https://t.me/KebabClub_bot" class="project-card__title" target="_blank">Telegram Web App for restaurant</a>
+                <a href="https://shakh9.github.io/kropp-fitness/" class="project-card__external-link" target="_blank">
+                  <svg class="project-card__external-icon" width="35" height="35" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M5,3C3.9,3,3,3.9,3,5v14c0,1.1,0.9,2,2,2h14c1.1,0,2-0.9,2-2v-6l-2-2v8H5V5h8l-2-2H5z M14,3l2.7,2.7l-7.5,7.5l1.7,1.7 l7.5-7.5L21,10V3H14z" fill="currentColor"/>
+                  </svg>
+                </a>
+              </div>
+              <div class="project-card__tech">
+                <div class="tech-circle" title="React">
+                  <img src="assets/icons/technologies/react.png" alt="React" class="tech-circle__icon">
+                </div>
+                <div class="tech-circle" title="JavaScript">
+                  <img src="assets/icons/technologies/js.png" alt="JavaScript" class="tech-circle__icon">
+                </div>
+                <div class="tech-circle" title="CSS">
+                  <img src="assets/icons/technologies/css.png" alt="CSS" class="tech-circle__icon">
+                </div>
+                <div class="tech-circle" title="Telegram API">
+                  <img src="assets/icons/technologies/telegram.png" alt="Telegram API" class="tech-circle__icon">
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Карточка проекта 2 -->
+          <div class="project-card">
+            <a href="https://shakh9.github.io/portfolio-site-future-tech/" class="project-card__image-link" target="_blank">
+              <img src="assets/images/future-tech.png" alt="Future Tech" class="project-card__image">
+            </a>
+            <div class="project-card__content">
+              <div class="project-card__title-wrapper">
+                <a href="https://shakh9.github.io/portfolio-site-future-tech/" class="project-card__title" target="_blank">Future Tech</a>
+                <a href="https://shakh9.github.io/kropp-fitness/" class="project-card__external-link" target="_blank">
+                  <svg class="project-card__external-icon" width="35" height="35" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M5,3C3.9,3,3,3.9,3,5v14c0,1.1,0.9,2,2,2h14c1.1,0,2-0.9,2-2v-6l-2-2v8H5V5h8l-2-2H5z M14,3l2.7,2.7l-7.5,7.5l1.7,1.7 l7.5-7.5L21,10V3H14z" fill="currentColor"/>
+                  </svg>
+                </a>
+              </div>
+              <div class="project-card__tech">
+                <div class="tech-circle" title="JavaScript">
+                  <img src="assets/icons/technologies/js.png" alt="JavaScript" class="tech-circle__icon">
+                </div>
+                <div class="tech-circle" title="HTML">
+                  <img src="assets/icons/technologies/html.png" alt="HTML" class="tech-circle__icon">
+                </div>
+                <div class="tech-circle" title="SASS">
+                  <img src="assets/icons/technologies/sass.png" alt="SASS" class="tech-circle__icon">
+                </div>
+                <div class="tech-circle" title="CSS">
+                  <img src="assets/icons/technologies/css.png" alt="CSS" class="tech-circle__icon">
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Карточка проекта 3 -->
+          <div class="project-card">
+            <a href="https://shakh9.github.io/positivus/" class="project-card__image-link" target="_blank">
+              <img src="assets/images/project-positivus.png" alt="Project 3 screenshot" class="project-card__image">
+            </a>
+            <div class="project-card__content">
+              <div class="project-card__title-wrapper">
+                <a href="https://shakh9.github.io/positivus/" class="project-card__title" target="_blank">Positivus</a>
+                <a href="https://shakh9.github.io/kropp-fitness/" class="project-card__external-link" target="_blank">
+                  <svg class="project-card__external-icon" width="35" height="35" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M5,3C3.9,3,3,3.9,3,5v14c0,1.1,0.9,2,2,2h14c1.1,0,2-0.9,2-2v-6l-2-2v8H5V5h8l-2-2H5z M14,3l2.7,2.7l-7.5,7.5l1.7,1.7 l7.5-7.5L21,10V3H14z" fill="currentColor"/>
+                  </svg>
+                </a>
+              </div>
+              <div class="project-card__tech">
+                <div class="tech-circle" title="SASS">
+                  <img src="assets/icons/technologies/sass.png" alt="SASS" class="tech-circle__icon">
+                </div>
+                <div class="tech-circle" title="CSS">
+                  <img src="assets/icons/technologies/css.png" alt="CSS" class="tech-circle__icon">
+                </div>
+                <div class="tech-circle" title="HTML">
+                  <img src="assets/icons/technologies/html.png" alt="HTML" class="tech-circle__icon">
+                </div>
+                <div class="tech-circle" title="Prepros">
+                  <img src="assets/icons/technologies/prepros.png" alt="Prepros" class="tech-circle__icon">
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Карточка проекта 4 -->
+          <div class="project-card">
+            <a href="https://shakh9.github.io/kropp-fitness/" class="project-card__image-link" target="_blank">
+              <img src="assets/images/kropp-fitness.jpg" alt="Kropp Fitness" class="project-card__image">
+            </a>
+            <div class="project-card__content">
+              <div class="project-card__title-wrapper">
+                <a href="https://shakh9.github.io/kropp-fitness/" class="project-card__title" target="_blank">Kropp Fitness
+                <a href="https://shakh9.github.io/kropp-fitness/" class="project-card__external-link" target="_blank">
+                  <svg class="project-card__external-icon" width="35" height="35" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M5,3C3.9,3,3,3.9,3,5v14c0,1.1,0.9,2,2,2h14c1.1,0,2-0.9,2-2v-6l-2-2v8H5V5h8l-2-2H5z M14,3l2.7,2.7l-7.5,7.5l1.7,1.7 l7.5-7.5L21,10V3H14z" fill="currentColor"/>
+                  </svg>
+                </a>
+              </div>
+              <div class="project-card__tech">
+                <div class="tech-circle" title="CSS">
+                  <img src="assets/icons/technologies/css.png" alt="CSS" class="tech-circle__icon">
+                </div>
+                <div class="tech-circle" title="HTML">
+                  <img src="assets/icons/technologies/html.png" alt="HTML" class="tech-circle__icon">
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Карточка проекта 5 -->
+          <div class="project-card">
+            <a href="https://shakh9.github.io/site02-gocorona/" class="project-card__image-link" target="_blank">
+              <img src="assets/images/gocorona.jpg" alt="GoCorona" class="project-card__image">
+            </a>
+            <div class="project-card__content">
+              <div class="project-card__title-wrapper">
+                <a href="https://shakh9.github.io/site02-gocorona/" class="project-card__title" target="_blank">GoCorona</a>
+                <a href="https://shakh9.github.io/kropp-fitness/" class="project-card__external-link" target="_blank">
+                  <svg class="project-card__external-icon" width="35" height="35" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M5,3C3.9,3,3,3.9,3,5v14c0,1.1,0.9,2,2,2h14c1.1,0,2-0.9,2-2v-6l-2-2v8H5V5h8l-2-2H5z M14,3l2.7,2.7l-7.5,7.5l1.7,1.7 l7.5-7.5L21,10V3H14z" fill="currentColor"/>
+                  </svg>
+                </a>
+              </div>
+              <div class="project-card__tech">
+                <div class="tech-circle" title="CSS">
+                  <img src="assets/icons/technologies/css.png" alt="CSS" class="tech-circle__icon">
+                </div>
+                <div class="tech-circle" title="HTML">
+                  <img src="assets/icons/technologies/html.png" alt="HTML" class="tech-circle__icon">
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Карточка проекта 6 -->
+          <div class="project-card">
+            <a href="https://shakh9.github.io/firstsite-relvise/" class="project-card__image-link" target="_blank">
+              <img src="assets/images/relvise.jpg" alt="Relvise" class="project-card__image">
+            </a>
+            <div class="project-card__content">
+              <div class="project-card__title-wrapper">
+                <a href="https://shakh9.github.io/firstsite-relvise/" class="project-card__title" target="_blank">Relvise</a>
+                <a href="https://shakh9.github.io/kropp-fitness/" class="project-card__external-link" target="_blank">
+                  <svg class="project-card__external-icon" width="35" height="35" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M5,3C3.9,3,3,3.9,3,5v14c0,1.1,0.9,2,2,2h14c1.1,0,2-0.9,2-2v-6l-2-2v8H5V5h8l-2-2H5z M14,3l2.7,2.7l-7.5,7.5l1.7,1.7 l7.5-7.5L21,10V3H14z" fill="currentColor"/>
+                  </svg>
+                </a>
+              </div>
+              <div class="project-card__tech">
+                <div class="tech-circle" title="CSS">
+                  <img src="assets/icons/technologies/css.png" alt="CSS" class="tech-circle__icon">
+                </div>
+                <div class="tech-circle" title="HTML">
+                  <img src="assets/icons/technologies/html.png" alt="HTML" class="tech-circle__icon">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="page">
+      <div class="about-container">
+        <h2 class="about-title">About Me</h2>
+        <p class="about-intro">
+          Hi, my name is Ravin, I'm 26 years old. I switched from finance and analytics
+          to programming and development because I truly love it. I enjoy creating, improving,
+          and building things that people actually enjoy using. I believe the best products
+          come from a mix of empathy, logic, and attention to detail.
+        </p>
+
+        <!-- Work Experience (Timeline) -->
+        <section class="about-section">
+          <h3 class="about-section__title">Work Experience</h3>
+          <div class="timeline">
+
+            <div class="timeline-item">
+              <div class="timeline-item__dot"></div>
+              <div class="timeline-item__content">
+                <div class="timeline-item__period">Feb 2024 — Mar 2026</div>
+                <h4 class="timeline-item__company">Frontend Developer</h4>
+                <div class="timeline-item__position">Organization: Mosburger</div>
+                <p class="timeline-item__description">
+                  Developed a Telegram bot for a restaurant with a web application using React and Telegram Mini Apps (menu, orders, cart). I created the front-end of an analytics dashboard with iiko integration for real-time KPIs for a restaurant chain (authentication, charts, filters, employee hierarchy). I also developed landing pages for advertising campaigns.
+                </p>
+                <div class="timeline-item__tech">
+                  <span class="skill-tag skill-tag--small">React</span>
+                  <span class="skill-tag skill-tag--small">JavaScript</span>
+                  <span class="skill-tag skill-tag--small">CSS</span>
+                  <span class="skill-tag skill-tag--small">SASS</span>
+                  <span class="skill-tag skill-tag--small">HTML</span>
+                  <span class="skill-tag skill-tag--small">Git</span>
+                  <span class="skill-tag skill-tag--small">Vite</span>
+                  <span class="skill-tag skill-tag--small">Webpack</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="timeline-item">
+              <div class="timeline-item__dot"></div>
+              <div class="timeline-item__content">
+                <div class="timeline-item__period">Jan 2022 — Jan 2024</div>
+                <h3 class="timeline-item__company">Head of Analytics Department</h3>
+                <div class="timeline-item__position">Organization: NordRestGroup</div>
+                <p class="timeline-item__description">
+                  Managed a team of 2 analysts, responsible for management reporting and P&L. Participated in budgeting, revenue forecasting, and prepared presentations for leadership. Handled ad-hoc analytical requests.
+                </p>
+                <div class="timeline-item__tech">
+                  <span class="skill-tag skill-tag--small">Excel</span>
+                  <span class="skill-tag skill-tag--small">Google Sheets</span>
+                  <span class="skill-tag skill-tag--small">1C</span>
+                  <span class="skill-tag skill-tag--small">Delegation of tasks</span>
+                  <span class="skill-tag skill-tag--small">P&L</span>
+                  <span class="skill-tag skill-tag--small">Budgeting</span>
+                  <span class="skill-tag skill-tag--small">Cash Flow</span>
+                  <span class="skill-tag skill-tag--small">Financial models</span>
+                  <span class="skill-tag skill-tag--small">Ad-hoc report</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="timeline-item">
+              <div class="timeline-item__dot"></div>
+              <div class="timeline-item__content">
+                <div class="timeline-item__period">May 2021 — Jan 2022</div>
+                <h3 class="timeline-item__company">Financial Analyst</h3>
+                <div class="timeline-item__position">Organization: NordRestGroup</div>
+                <p class="timeline-item__description">
+                  Prepared daily, weekly and monthly reports on key metrics, P&L statements. Handled budgeting and plan-fact analysis. Monitored employee KPIs and cash flow.
+                </p>
+                <div class="timeline-item__tech">
+                  <span class="skill-tag skill-tag--small">Excel</span>
+                  <span class="skill-tag skill-tag--small">Google Sheets</span>
+                  <span class="skill-tag skill-tag--small">1C</span>
+                  <span class="skill-tag skill-tag--small">P&L</span>
+                  <span class="skill-tag skill-tag--small">Budgeting</span>
+                  <span class="skill-tag skill-tag--small">Cash Flow</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="timeline-item">
+              <div class="timeline-item__dot"></div>
+              <div class="timeline-item__content">
+                <div class="timeline-item__period">Feb 2020 — May 2021</div>
+                <h3 class="timeline-item__company">Economist</h3>
+                <div class="timeline-item__position">Organization: NordRetail</div>
+                <p class="timeline-item__description">
+                  Prepared management reports (profit and loss statements), conducted cash reconciliations and plan/actual analysis.
+                </p>
+                <div class="timeline-item__tech">
+                  <span class="skill-tag skill-tag--small">Excel</span>
+                  <span class="skill-tag skill-tag--small">1C</span>
+                  <span class="skill-tag skill-tag--small">P&L</span>
+                  <span class="skill-tag skill-tag--small">Сash reconciliation</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="timeline-item">
+              <div class="timeline-item__dot"></div>
+              <div class="timeline-item__content">
+                <div class="timeline-item__period">May 2019 — Aug 2019</div>
+                <h3 class="timeline-item__company">Credit Expert</h3>
+                <div class="timeline-item__position">Organization: Home Credit Bank</div>
+                <p class="timeline-item__description">
+                  Advised clients on banking products, prepared bank documents and payment orders.
+                </p>
+                <div class="timeline-item__tech">
+                  <span class="skill-tag skill-tag--small">Client Consulting</span>
+                  <span class="skill-tag skill-tag--small">Documentation</span>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </section>
+
+        <!-- Hard Skills -->
+        <section class="about-section">
+          <h3 class="about-section__title">Hard Skills</h3>
+          <div class="skills-category">
+            <h4 class="skills-category__title">Frontend</h4>
+            <div class="skills-grid">
+              <div class="skill-card" data-color="#F7DF1E">
+                <div class="skill-card__icon">
+                  <img src="assets/icons/technologies/js.png" alt="JavaScript">
+                </div>
+                <span class="skill-card__name">JavaScript</span>
+              </div>
+              <div class="skill-card" data-color="#3178C6">
+                <div class="skill-card__icon">
+                  <img src="assets/icons/technologies/ts.png" alt="TypeScript">
+                </div>
+                <span class="skill-card__name">TypeScript</span>
+              </div>
+              <div class="skill-card" data-color="#61DAFB">
+                <div class="skill-card__icon">
+                  <img src="assets/icons/technologies/react.png" alt="React">
+                </div>
+                <span class="skill-card__name">React</span>
+              </div>
+              <div class="skill-card" data-color="#000000">
+                <div class="skill-card__icon">
+                  <img src="assets/icons/technologies/nextjs.png" alt="Next.js">
+                </div>
+                <span class="skill-card__name">Next.js</span>
+              </div>
+              <div class="skill-card" data-color="#F06A32">
+                <div class="skill-card__icon">
+                  <img src="assets/icons/technologies/html.png" alt="HTML">
+                </div>
+                <span class="skill-card__name">HTML</span>
+              </div>
+              <div class="skill-card" data-color="#000000">
+                <div class="skill-card__icon">
+                  <img src="assets/icons/technologies/threejs.png" alt="Three.js">
+                </div>
+                <span class="skill-card__name">Three.js</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- State & Data -->
+          <div class="skills-category">
+            <h4 class="skills-category__title">State & Data</h4>
+            <div class="skills-grid">
+              <div class="skill-card" data-color="#764ABC">
+                <div class="skill-card__icon">
+                  <img src="assets/icons/technologies/redux.png" alt="Redux Toolkit">
+                </div>
+                <span class="skill-card__name">Redux Toolkit</span>
+              </div>
+              <div class="skill-card" data-color="#FF6776">
+                <div class="skill-card__icon">
+                  <img src="assets/icons/technologies/tanstack.png" alt="TanStack Query">
+                </div>
+                <span class="skill-card__name">TanStack Query</span>
+              </div>
+              <div class="skill-card" data-color="#443E38">
+                <div class="skill-card__icon">
+                  <img src="assets/icons/technologies/zustand.png" alt="Zustand">
+                </div>
+                <span class="skill-card__name">Zustand</span>
+              </div>
+              <div class="skill-card" data-color="#EC5990">
+                <div class="skill-card__icon">
+                  <img src="assets/icons/technologies/reacthookform.png" alt="React Hook Form">
+                </div>
+                <span class="skill-card__name">React Hook Form</span>
+              </div>
+              <div class="skill-card" data-color="#00E5FF">
+                <div class="skill-card__icon">
+                  <img src="assets/icons/technologies/jwt.png" alt="JWT">
+                </div>
+                <span class="skill-card__name">JWT</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Styling -->
+          <div class="skills-category">
+            <h4 class="skills-category__title">Styling</h4>
+            <div class="skills-grid">
+              <div class="skill-card" data-color="#006BC0">
+                <div class="skill-card__icon">
+                  <img src="assets/icons/technologies/css.png" alt="CSS3">
+                </div>
+                <span class="skill-card__name">CSS</span>
+              </div>
+              <div class="skill-card" data-color="#CC6699">
+                <div class="skill-card__icon">
+                  <img src="assets/icons/technologies/sass.png" alt="SASS">
+                </div>
+                <span class="skill-card__name">SCSS / SASS</span>
+              </div>
+              <div class="skill-card" data-color="#06B6D4">
+                <div class="skill-card__icon">
+                  <img src="assets/icons/technologies/tailwind.png" alt="Tailwind CSS">
+                </div>
+                <span class="skill-card__name">Tailwind CSS</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Tools -->
+          <div class="skills-category">
+            <h4 class="skills-category__title">Tools</h4>
+            <div class="skills-grid">
+              <div class="skill-card" data-color="#F05032">
+                <div class="skill-card__icon">
+                  <img src="assets/icons/technologies/git.png" alt="Git">
+                </div>
+                <span class="skill-card__name">Git</span>
+              </div>
+              <div class="skill-card" data-color="#646CFF">
+                <div class="skill-card__icon">
+                  <img src="assets/icons/technologies/vite.png" alt="Vite">
+                </div>
+                <span class="skill-card__name">Vite</span>
+              </div>
+              <div class="skill-card" data-color="#8DD6F9">
+                <div class="skill-card__icon">
+                  <img src="assets/icons/technologies/webpack.png" alt="Webpack">
+                </div>
+                <span class="skill-card__name">Webpack</span>
+              </div>
+              <div class="skill-card" data-color="#CB3837">
+                <div class="skill-card__icon">
+                  <img src="assets/icons/technologies/npm.png" alt="NPM">
+                </div>
+                <span class="skill-card__name">NPM</span>
+              </div>
+              <div class="skill-card" data-color="#2C8EBB">
+                <div class="skill-card__icon">
+                  <img src="assets/icons/technologies/yarn.png" alt="Yarn">
+                </div>
+                <span class="skill-card__name">Yarn</span>
+              </div>
+              <div class="skill-card" data-color="#000000">
+                <div class="skill-card__icon">
+                  <img src="assets/icons/technologies/bun.png" alt="Bun">
+                </div>
+                <span class="skill-card__name">Bun</span>
+              </div>
+              <div class="skill-card" data-color="#4B32C3">
+                <div class="skill-card__icon">
+                  <img src="assets/icons/technologies/eslint.png" alt="ESLint">
+                </div>
+                <span class="skill-card__name">ESLint</span>
+              </div>
+              <div class="skill-card" data-color="#EA5E5E">
+                <div class="skill-card__icon">
+                  <img src="assets/icons/technologies/prettier.png" alt="Prettier">
+                </div>
+                <span class="skill-card__name">Prettier</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Testing -->
+          <div class="skills-category">
+            <h4 class="skills-category__title">Testing</h4>
+            <div class="skills-grid">
+              <div class="skill-card" data-color="#99425B">
+                <div class="skill-card__icon">
+                  <img src="assets/icons/technologies/jest.png" alt="Jest">
+                </div>
+                <span class="skill-card__name">Jest</span>
+              </div>
+              <div class="skill-card" data-color="#E03330">
+                <div class="skill-card__icon">
+                  <img src="assets/icons/technologies/rtl.png" alt="React Testing Library">
+                </div>
+                <span class="skill-card__name">React Testing Library</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Architecture -->
+          <div class="skills-category">
+            <h4 class="skills-category__title">Architecture</h4>
+            <div class="skills-grid">
+              <div class="skill-card" data-color="#29BEDC">
+                <div class="skill-card__icon">
+                  <img src="assets/icons/technologies/fsd.png" alt="Feature-Sliced Design">
+                </div>
+                <span class="skill-card__name">Feature-Sliced Design</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Other -->
+          <div class="skills-category">
+            <h4 class="skills-category__title">Other</h4>
+            <div class="skills-grid">
+              <div class="skill-card" data-color="#F24E1E">
+                <div class="skill-card__icon">
+                  <img src="assets/icons/technologies/figma.png" alt="Figma">
+                </div>
+                <span class="skill-card__name">Figma</span>
+              </div>
+              <div class="skill-card" data-color="#000000">
+                <div class="skill-card__icon">
+                  <img src="assets/icons/technologies/restapi.png" alt="REST API">
+                </div>
+                <span class="skill-card__name">REST API</span>
+              </div>
+              <div class="skill-card" data-color="#5A29E4">
+                <div class="skill-card__icon">
+                  <img src="assets/icons/technologies/axios.png" alt="Axios">
+                </div>
+                <span class="skill-card__name">Axios</span>
+              </div>
+              <div class="skill-card" data-color="#E535AB">
+                <div class="skill-card__icon">
+                  <img src="assets/icons/technologies/graphql.png" alt="GraphQL">
+                </div>
+                <span class="skill-card__name">GraphQL</span>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Soft Skills -->
+        <section class="about-section">
+          <h3 class="about-section__title">Soft Skills</h3>
+          <div class="skills-grid">
+            <div class="skill-card" data-color="#53A9DD">
+              <div class="skill-card__icon">
+                <img src="assets/icons/soft-skills/teamwork.png" alt="Teamwork">
+              </div>
+              <span class="skill-card__name">Teamwork</span>
+            </div>
+
+            <div class="skill-card" data-color="#620F84">
+              <div class="skill-card__icon">
+                <img src="assets/icons/soft-skills/leadership.png" alt="Leadership">
+              </div>
+              <span class="skill-card__name">Leadership</span>
+            </div>
+
+            <div class="skill-card" data-color="#05EAAD">
+              <div class="skill-card__icon">
+                <img src="assets/icons/soft-skills/problem-solving.png" alt="Problem Solving">
+              </div>
+              <span class="skill-card__name">Problem Solving</span>
+            </div>
+
+            <div class="skill-card" data-color="#F0691E">
+              <div class="skill-card__icon">
+                <img src="assets/icons/soft-skills/communication.png" alt="Communication">
+              </div>
+              <span class="skill-card__name">Communication</span>
+            </div>
+
+            <div class="skill-card" data-color="#1AD5BD">
+              <div class="skill-card__icon">
+                <img src="assets/icons/soft-skills/deadline.png" alt="Deadline Driven">
+              </div>
+              <span class="skill-card__name">Deadline Driven</span>
+            </div>
+
+            <div class="skill-card" data-color="#8E5BF7">
+              <div class="skill-card__icon">
+                <img src="assets/icons/soft-skills/conflict-resolution.png" alt="Conflict Resolution">
+              </div>
+              <span class="skill-card__name">Conflict Resolution</span>
+            </div>
+
+            <div class="skill-card" data-color="#3E74FF">
+              <div class="skill-card__icon">
+                <img src="assets/icons/soft-skills/mentorship.png" alt="Mentorship">
+              </div>
+              <span class="skill-card__name">Mentorship</span>
+            </div>
+
+            <div class="skill-card" data-color="#AE00FF">
+              <div class="skill-card__icon">
+                <img src="assets/icons/soft-skills/adaptability.png" alt="Adaptability">
+              </div>
+              <span class="skill-card__name">Adaptability</span>
+            </div>
+
+            <div class="skill-card" data-color="#2B67FF">
+              <div class="skill-card__icon">
+                <img src="assets/icons/soft-skills/analytical-thinking.png" alt="Critical Thinking">
+              </div>
+              <span class="skill-card__name">Analytical Thinking</span>
+            </div>
+
+            <div class="skill-card" data-color="#5C12D4">
+              <div class="skill-card__icon">
+                <img src="assets/icons/soft-skills/attention-to-detail.png" alt="Attention to Detail">
+              </div>
+              <span class="skill-card__name">Attention to Detail</span>
+            </div>
+
+            <div class="skill-card" data-color="#E93029">
+              <div class="skill-card__icon">
+                <img src="assets/icons/soft-skills/time-management.png" alt="Time Management">
+              </div>
+              <span class="skill-card__name">Time Management</span>
+            </div>
+
+            <div class="skill-card" data-color="#312FB4">
+              <div class="skill-card__icon">
+                <img src="assets/icons/soft-skills/feedback.png" alt="Feedback Reception">
+              </div>
+              <span class="skill-card__name">Feedback Reception</span>
+            </div>
+
+          </div>
+        </section>
+
+        <!-- Education -->
+        <section class="about-section">
+          <h3 class="about-section__title">Education</h3>
+
+          <!-- University -->
+          <div class="education-item">
+            <div class="education-item__icon">
+              <img src="assets/icons/education/usue.png" alt="University`s logo">
+            </div>
+            <div class="education-item__content">
+              <div class="education-item__period">2021 — 2024</div>
+              <h4 class="education-item__title">Ural State University of Economics</h4>
+              <div class="education-item__subtitle">Bachelor's Degree in Information Technology</div>
+              <p class="education-item__description">Specialization: Software Engineering of Automated Systems</p>
+            </div>
+          </div>
+
+          <!-- Languages -->
+          <div class="skills-category">
+            <h4 class="skills-category__title">Languages</h4>
+            <div class="skills-grid">
+              <div class="skill-card" data-color="#0052B4">
+                <div class="skill-card__icon">
+                  <img src="assets/icons/education/russia.png" alt="Russian">
+                </div>
+                <span class="skill-card__name">Russian (C2)</span>
+              </div>
+
+              <div class="skill-card" data-color="#D80027">
+                <div class="skill-card__icon">
+                  <img src="assets/icons/education/uk.png" alt="English">
+                </div>
+                <span class="skill-card__name">English (B1-B2)</span>
+              </div>
+
+              <div class="skill-card" data-color="#338AF3">
+                <div class="skill-card__icon">
+                  <img src="assets/icons/education/azerbaijan.png" alt="Azerbaijan">
+                </div>
+                <span class="skill-card__name">Azerbaijani (C1)</span>
+              </div>
+
+              <div class="skill-card" data-color="#02873B">
+                <div class="skill-card__icon">
+                  <img src="assets/icons/education/talysh.png" alt="Talysh">
+                </div>
+                <span class="skill-card__name">Talysh (C1)</span>
+              </div>
+
+              <div class="skill-card" data-color="#D80027">
+                <div class="skill-card__icon">
+                  <img src="assets/icons/education/turkey.png" alt="Turkey">
+                </div>
+                <span class="skill-card__name">Turkish (B1)</span>
+              </div>
+
+
+            </div>
+          </div>
+        </section>
+      </div>
+    </section>
+
+    <section id="contact" class="page">
+      <div class="contact-container">
+        <h2 class="contact-title">Contacts</h2>
+
+        <div class="contact-grid">
+          <!-- Contact Info -->
+          <div class="contact-section">
+            <h3 class="contact-section__title">Contact Info</h3>
+
+            <!-- Email -->
+            <div class="contact-item">
+              <div class="contact-item__icon">
+                <img src="assets/icons/contact/email.png" alt="Email">
+              </div>
+              <div class="contact-item__info">
+                <div class="contact-item__label">Email</div>
+                <div class="contact-item__value-group">
+                  <a href="mailto:99ravin99@gmail.com" class="contact-item__value contact-item__link">
+                    99ravin99@gmail.com
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Location -->
+            <div class="contact-item">
+              <div class="contact-item__icon">
+                <img src="assets/icons/contact/location.png" alt="Location">
+              </div>
+              <div class="contact-item__info">
+                <div class="contact-item__label">Location</div>
+                <div class="contact-item__value">Russia, Yekaterinburg / UTC+5</div>
+              </div>
+            </div>
+
+            <!-- Availability -->
+            <div class="contact-item">
+              <div class="contact-item__icon">
+                <img src="assets/icons/contact/availability.png" alt="Availability">
+              </div>
+              <div class="contact-item__info">
+                <div class="contact-item__label">Availability</div>
+                <div class="contact-item__value">Usually respond within 24h</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Socials -->
+          <div class="contact-section">
+            <h3 class="contact-section__title">Socials</h3>
+
+            <!-- Telegram -->
+            <div class="contact-item">
+              <div class="contact-item__icon">
+                <img src="assets/icons/contact/telegram.png" alt="Telegram">
+              </div>
+              <div class="contact-item__info">
+                <a href="https://t.me/shakhravin" class="contact-item__link" target="_blank">
+                  Telegram
+                </a>
+              </div>
+            </div>
+
+            <!-- LinkedIn -->
+            <div class="contact-item">
+              <div class="contact-item__icon">
+                <img src="assets/icons/contact/linkedin.png" alt="LinkedIn">
+              </div>
+              <div class="contact-item__info">
+                <a href="https://www.linkedin.com/in/ravin-shakhmuradov-6b2294405/" class="contact-item__link" target="_blank">
+                  LinkedIn
+                </a>
+              </div>
+            </div>
+
+            <!-- GitHub -->
+            <div class="contact-item">
+              <div class="contact-item__icon">
+                <img src="assets/icons/contact/github.png" alt="GitHub">
+              </div>
+              <div class="contact-item__info">
+                <a href="https://github.com/Shakh9" class="contact-item__link" target="_blank">
+                  GitHub
+                </a>
+              </div>
+            </div>
+
+            <!-- YouTube (Coming Soon) -->
+            <div class="contact-item">
+              <div class="contact-item__icon">
+                <img src="assets/icons/contact/youtube.png" alt="YouTube">
+              </div>
+              <div class="contact-item__info">
+                <span class="contact-item__soon">YouTube (Coming Soon)</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+  <div class="mobile-burger-menu">
+    <p class="burger-menu__logo">RS</p>
+    <button class="burger" aria-label="Menu">
+      <span class="burger__line"></span>
+      <span class="burger__line"></span>
+      <span class="burger__line"></span>
+    </button>
+  </div>
+  <script src="./scripts/main.js"></script>
+  <!-- Three.js библиотека -->
+  <script type="importmap">
+    {
+      "imports": {
+        "three": "https://unpkg.com/three@0.128.0/build/three.module.js",
+        "three/addons/": "https://unpkg.com/three@0.128.0/examples/jsm/"
+      }
+    }
+  </script>
+  <!-- Печатающийся текст -->
+  <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+  <!-- Скрипт для сферы -->
+  <script type="module" src="scripts/sphere.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      new Typed('#typed-text', {
+        strings: ['modern web applications.', 'fast and accessible interfaces.', 'clean and maintainable code.', 'pixel-perfect designs.', 'solutions that users love.'],
+        typeSpeed: 60,
+        backSpeed: 40,
+        backDelay: 1500,
+        startDelay: 500,
+        loop: true,
+        cursorChar: '|'
+      });
+    });
+  </script>
+  <script src="scripts/router.js"></script>
+  <script src="scripts/scroll-animation.js"></script>
+  <script src="scripts/entry-animation.js"></script>
+</body>
+</html>

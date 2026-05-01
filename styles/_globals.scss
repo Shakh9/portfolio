@@ -1,0 +1,15 @@
+@use 'helpers' as *;
+
+body {
+  @include fluid-text(24, 16);
+  font-family: var(--font-family-base);
+  color: var(--color-black);
+  background-color: #EEEEEEFF;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: 0.2s ease;
+}
+
